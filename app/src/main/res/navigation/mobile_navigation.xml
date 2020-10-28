@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.queensuber.hackherstarterapp.ui.notifications.NotificationsFragment"
+        android:name="com.queensuber.hackherstarterapp.ui.notifications.NewsFragment"
         android:label="@string/title_news_feed"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_news" />
 </navigation>

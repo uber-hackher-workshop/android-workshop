@@ -18,6 +18,7 @@ import javax.inject.Singleton
 class NetworkModule {
     companion object {
         private const val BASE_URL = "http://newsapi.org/v2/"
+        private const val API_KEY = "apiKey"
     }
 
     @Provides
@@ -30,6 +31,13 @@ class NetworkModule {
 
         return OkHttpClient.Builder()
             .addInterceptor(logger)
+            .addInterceptor{ chain ->
+                val request = chain.request()
+                val httpUrl = request.url.newBuilder()
+                    .addQueryParameter(API_KEY, "2443088b36f44f82a1826b7afe31f227")
+                    .build()
+                chain.proceed(request.newBuilder().url(httpUrl).build())
+            }
             .build()
     }
 

@@ -1,6 +1,7 @@
-package com.queensuber.hackherstarterapp.viewmodels
+package com.queensuber.hackherstarterapp.ui.notifications
 
 import androidx.hilt.lifecycle.ViewModelInject
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,21 +10,25 @@ import com.queensuber.hackherstarterapp.data.NewsResponse
 import com.queensuber.hackherstarterapp.data.Resource
 import kotlinx.coroutines.launch
 
-class NewsArticleViewModel @ViewModelInject internal constructor(private val newsRepository: NewsRepository) :
+class NewsArticleViewModel
+@ViewModelInject internal constructor(private val newsRepository: NewsRepository) :
     ViewModel() {
-    private val topHeadlinesResponse = MutableLiveData<Resource<NewsResponse>>()
+    private val _response = MutableLiveData<Resource<NewsResponse>>()
+
+    val response: LiveData<Resource<NewsResponse>>
+        get() = _response
 
     init {
         getTopHeadlines()
     }
 
     private fun getTopHeadlines() = viewModelScope.launch {
-        topHeadlinesResponse.postValue(Resource.loading(null))
+        _response.postValue(Resource.loading(null))
         newsRepository.getTopHeadlines().let { response ->
             if (response.isSuccessful) {
-                topHeadlinesResponse.postValue(Resource.success(response.body()))
+                _response.postValue(Resource.success(response.body()))
             } else {
-                topHeadlinesResponse.postValue(
+                _response.postValue(
                     Resource.error(
                         response.errorBody().toString(),
                         null
