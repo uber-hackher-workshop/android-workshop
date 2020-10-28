@@ -1,5 +1,7 @@
 package com.queensuber.hackherstarterapp.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.queensuber.hackherstarterapp.R
 import com.queensuber.hackherstarterapp.data.Article
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_news_article_card.view.*
 
 class NewsArticleAdapter : RecyclerView.Adapter<NewsArticleAdapter.NewsArticleViewHolder>() {
@@ -45,10 +48,20 @@ class NewsArticleAdapter : RecyclerView.Adapter<NewsArticleAdapter.NewsArticleVi
                 card_description.text = description
                 card_description.visibility = View.VISIBLE
             } ?: run {card_description.visibility = View.GONE}
-            article.author?.let {author ->
+            article.author?.let { author ->
                 card_secondary_description.text = author
                 card_secondary_description.visibility = View.VISIBLE
             } ?: run {card_secondary_description.visibility = View.GONE}
+            article.urlToImage?.let { urlToImage ->
+                Picasso.get().load(urlToImage).into(card_image)
+            }
+            article.url?.let { url ->
+                card.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(url)
+                    holder.itemView.context.startActivity(intent)
+                }
+            }
         }
     }
 

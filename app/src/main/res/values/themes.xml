@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/pink_hack_her</item>
         <item name="colorSecondaryVariant">@color/pink_hack_her</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="android:textColorSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

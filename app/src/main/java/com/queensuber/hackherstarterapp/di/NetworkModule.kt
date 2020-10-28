@@ -19,6 +19,7 @@ class NetworkModule {
     companion object {
         private const val BASE_URL = "http://newsapi.org/v2/"
         private const val API_KEY = "apiKey"
+        private const val API_KEY_TOKEN = "2443088b36f44f82a1826b7afe31f227"
     }
 
     @Provides
@@ -34,7 +35,7 @@ class NetworkModule {
             .addInterceptor{ chain ->
                 val request = chain.request()
                 val httpUrl = request.url.newBuilder()
-                    .addQueryParameter(API_KEY, "2443088b36f44f82a1826b7afe31f227")
+                    .addQueryParameter(API_KEY, API_KEY_TOKEN)
                     .build()
                 chain.proceed(request.newBuilder().url(httpUrl).build())
             }
