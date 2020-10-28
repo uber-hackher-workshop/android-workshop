@@ -18,7 +18,9 @@
     <style name="Theme.HackHerStarterApp" parent="Base.Theme.HackHerStarterApp" />
 
     <style name="Theme.HackHerStarterApp.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
-        <item name="materialThemeOverlay">@style/Theme.HackHerStarterApp.BottomNavigationView.Overlay</item>
+        <item name="materialThemeOverlay">
+            @style/Theme.HackHerStarterApp.BottomNavigationView.Overlay
+        </item>
         <item name="labelVisibilityMode">unlabeled</item>
     </style>
 
