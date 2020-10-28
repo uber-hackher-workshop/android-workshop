@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">HackHer Starter App</string>
-    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
     <string name="title_social">Social</string>
     <string name="title_news_feed">News Feed</string>
+    <string name="search_header_text">What news are you looking for today?</string>
 </resources>
