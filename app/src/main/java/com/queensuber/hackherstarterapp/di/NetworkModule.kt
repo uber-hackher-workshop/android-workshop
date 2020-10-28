@@ -32,7 +32,7 @@ class NetworkModule {
 
         return OkHttpClient.Builder()
             .addInterceptor(logger)
-            .addInterceptor{ chain ->
+            .addInterceptor { chain ->
                 val request = chain.request()
                 val httpUrl = request.url.newBuilder()
                     .addQueryParameter(API_KEY, API_KEY_TOKEN)

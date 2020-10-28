@@ -43,15 +43,15 @@ class NewsArticleAdapter : RecyclerView.Adapter<NewsArticleAdapter.NewsArticleVi
             article.title?.let { title ->
                 card_title.text = title
                 card_title.visibility = View.VISIBLE
-            } ?: run {card_title.visibility = View.GONE }
+            } ?: run { card_title.visibility = View.GONE }
             article.description?.let { description ->
                 card_description.text = description
                 card_description.visibility = View.VISIBLE
-            } ?: run {card_description.visibility = View.GONE}
+            } ?: run { card_description.visibility = View.GONE }
             article.author?.let { author ->
                 card_secondary_description.text = author
                 card_secondary_description.visibility = View.VISIBLE
-            } ?: run {card_secondary_description.visibility = View.GONE}
+            } ?: run { card_secondary_description.visibility = View.GONE }
             article.urlToImage?.let { urlToImage ->
                 Picasso.get().load(urlToImage).into(card_image)
             }

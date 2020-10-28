@@ -20,9 +20,9 @@ class NewsFragment : Fragment() {
     private lateinit var adapter: NewsArticleAdapter
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_news, container, false)
         adapter = NewsArticleAdapter()
