@@ -1,4 +1,4 @@
-package com.queensuber.hackherstarterapp.ui.dashboard
+package com.queensuber.hackherstarterapp.ui.social
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.queensuber.hackherstarterapp.R
 
-class DashboardFragment : Fragment() {
+class SocialFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var socialViewModel: SocialViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        socialViewModel =
+            ViewModelProvider(this).get(SocialViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_social, container, false)
+        val textView: TextView = root.findViewById(R.id.text_social)
+        socialViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

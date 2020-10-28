@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_social"
-        android:name="com.queensuber.hackherstarterapp.ui.dashboard.DashboardFragment"
+        android:name="com.queensuber.hackherstarterapp.ui.social.SocialFragment"
         android:label="@string/title_social"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_social" />
 
     <fragment
         android:id="@+id/navigation_news"
