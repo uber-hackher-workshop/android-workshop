@@ -5,4 +5,5 @@ import javax.inject.Inject
 
 class NewsRepository @Inject constructor(private val newsServiceHelper: NewsServiceHelper) {
     suspend fun getTopHeadlines() = newsServiceHelper.getTopHeadlines()
+    suspend fun searchNews(query: String) = newsServiceHelper.searchNews(query)
 }

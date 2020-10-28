@@ -1,4 +1,4 @@
-package com.queensuber.hackherstarterapp.ui.notifications
+package com.queensuber.hackherstarterapp.ui.news
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData

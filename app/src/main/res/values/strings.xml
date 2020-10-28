@@ -4,4 +4,5 @@
     <string name="title_social">Social</string>
     <string name="title_news_feed">News Feed</string>
     <string name="search_header_text">What news are you looking for today?</string>
+    <string name="search_hint_text">Search</string>
 </resources>

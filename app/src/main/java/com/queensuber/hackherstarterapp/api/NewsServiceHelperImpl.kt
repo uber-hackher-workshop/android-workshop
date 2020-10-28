@@ -12,4 +12,7 @@ class NewsServiceHelperImpl @Inject constructor(private val newsService: NewsSer
         newsService.getTopHeadlines(
             Locale.getDefault().country
         )
+
+    override suspend fun searchNews(query: String): Response<NewsResponse> =
+        newsService.searchNews(query)
 }

@@ -1,4 +1,4 @@
-package com.queensuber.hackherstarterapp.ui.notifications
+package com.queensuber.hackherstarterapp.ui.news
 
 import android.os.Bundle
 import android.view.LayoutInflater
