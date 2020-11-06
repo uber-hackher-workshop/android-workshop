@@ -21,6 +21,9 @@ Only 1 of your team members will need to fork this repository. Everyone else can
 
 **Expected Result:** A team member can now make changes to your repository.
 
+# Setup
+Latest Android Studio Download Link (v4.1 as of Nov 2020): https://developer.android.com/studio
+
 # Overview
 <img src="android-sample-app.gif" alt="sample App" width="350"/>
 
