@@ -1,5 +1,5 @@
 # android-workshop
-This repository goes along with a 1 hour workshop on the topic of how to spend your time most effectively at a hackathon. Checkout the slides linked below.
+This repository goes along with a 1 hour workshop on the topic of how to spend your time most effectively at a hackathon. Checkout the slides in the workshop folder in this repository. 
 
 
 This is a simple Android sample app written in Kotlin and using Android Jetpack, ViewModels, Hilt, Retrofit, OkHttp, and RxRelays.
@@ -25,7 +25,7 @@ Only 1 of your team members will need to fork this repository. Everyone else can
 Latest Android Studio Download Link (v4.1 as of Nov 2020): https://developer.android.com/studio
 
 # Overview
-<img src="android-sample-app.gif" alt="sample App" width="350"/>
+<img src="workshop/android-sample-app.gif" alt="sample App" width="350"/>
 
 The app follows the following architecture:
 
